@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "94772589689",
+    "firebase_url": "https://fir-daily-news.firebaseio.com",
+    "project_id": "firebase-daily-news",
+    "storage_bucket": "firebase-daily-news.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94772589689:android:035a135154588c6b",
+        "android_client_info": {
+          "package_name": "com.andela.suada.dailynews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94772589689-gtbvppgej8f1t3iskp4g0rhjjlk6dmh7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.andela.suada.dailynews",
+            "certificate_hash": "E689DDE25784392D9F58BFEAE09584216A649C0C"
+          }
+        },
+        {
+          "client_id": "94772589689-v4lht9vd68refikd556b146okc4v83p0.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "94772589689-goare0kin9rfquvkf62e2vsrkbogobjm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCF91chHB19JnnfmxvxnRSaq-x-DbJhKX4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94772589689-v4lht9vd68refikd556b146okc4v83p0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
