@@ -6,8 +6,10 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreenActivity">
@@ -17,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.RegisterUserActivity"></activity>
+        <activity android:name=".views.RegisterUserActivity" />
+        <activity android:name=".views.MainActivity" />
+        <activity android:name=".views.SignInActivity"></activity>
     </application>
 
 </manifest>
