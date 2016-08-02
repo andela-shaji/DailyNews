@@ -57,7 +57,7 @@ public class RegisterUserActivity extends AppCompatActivity {
                     return;
                 }
                 if (password.length() < 6) {
-                    Toast.makeText(RegisterUserActivity.this, RegisterUserActivity.this.getString(R.string.short_password), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterUserActivity.this, RegisterUserActivity.this.getString(R.string.minimum_password), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
@@ -79,7 +79,7 @@ public class RegisterUserActivity extends AppCompatActivity {
         btSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(RegisterUserActivity.this, SignInActivity.class));
+                startActivity(new Intent(RegisterUserActivity.this, LoginActivity.class));
                 finish();
             }
         });
