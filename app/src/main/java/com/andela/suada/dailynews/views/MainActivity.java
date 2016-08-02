@@ -4,15 +4,19 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.Button;
 
 import com.andela.suada.dailynews.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.lang.reflect.Field;
+
 public class MainActivity extends AppCompatActivity {
-    private Button btSignOut;
     private FirebaseAuth.AuthStateListener authStateListener;
     private FirebaseAuth auth;
 
@@ -36,16 +40,43 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+        getOverflowMenu();
 
-        btSignOut = (Button) findViewById(R.id.btSignOut);
-        btSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.sign_out:
                 auth.signOut();
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+
+        }
+    }
+
+    private void getOverflowMenu() {
+        try {
+            ViewConfiguration config = ViewConfiguration.get(this);
+            Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+
+            if (menuKeyField != null) {
+                menuKeyField.setAccessible(true);
+                menuKeyField.setBoolean(config, false);
             }
-        });
+        }
+        catch (Exception e) {
+           e.printStackTrace();
+        }
 
     }
 }
