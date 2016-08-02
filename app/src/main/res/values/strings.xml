@@ -20,4 +20,9 @@
     <string name="sign_up_text">
       Don\'t have an account? <u>Sign Up</u>
     </string>
+    <string name="sign_out">Sign Out</string>
+    <string name="reset_password_text">We just need your registered Email \naddress to send your password reset \ninstructions.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="password_notification">We have sent you instructions to reset your password!</string>
+    <string name="password_notification_failed">Failed to send reset email!</string>
 </resources>

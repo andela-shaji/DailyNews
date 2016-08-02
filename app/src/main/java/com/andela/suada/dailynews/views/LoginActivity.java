@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText edEmail, edPassword;
-    private Button btLogIn, btSignUp;
+    private Button btLogIn, btSignUp, btResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
 
@@ -49,6 +49,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, RegisterUserActivity.class));
+                finish();
+            }
+        });
+        btResetPassword = (Button) findViewById(R.id.btResetPassword);
+        btResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
                 finish();
             }
         });
