@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.andela.suada.dailynews.views.LoginActivity;
 import com.andela.suada.dailynews.views.RegisterUserActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent i = new Intent(SplashScreenActivity.this, RegisterUserActivity.class);
+                Intent i = new Intent(SplashScreenActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
