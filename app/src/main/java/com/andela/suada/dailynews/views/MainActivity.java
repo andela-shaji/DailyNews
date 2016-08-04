@@ -11,6 +11,7 @@ import android.view.ViewConfiguration;
 import android.widget.Button;
 
 import com.andela.suada.dailynews.R;
+import com.andela.suada.dailynews.feeds.GetFeed;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         getOverflowMenu();
+        GetFeed feed = new GetFeed(this);
+        feed.execute();
 
     }
 
